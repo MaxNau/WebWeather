@@ -89,6 +89,14 @@ div.weather-tab-control button.active {
 
 .tab-control{
    overflow: hidden;
+   background-image: url(Images/autumn.jpg) !important;
+   background-size: cover !important;
+   margin-bottom: 20px;
+   margin-top: 20px;
+}
+
+.tab-control p {
+    color: white;
 }
 
 .tab-control > ul{
@@ -105,7 +113,7 @@ div.weather-tab-control button.active {
     float: left;
     position: relative;
     padding: 0.4em;
-    border-bottom: 0.1em solid black;
+    border-bottom: 0.1em solid white;
 }
 
 
@@ -114,10 +122,11 @@ div.weather-tab-control button.active {
     color: black;
 }
 
-.tab-control > ul > li > a:hover {
-    opacity: 0.3;
+.tab-control > ul > li:hover {
+    background: rgba(255,255,255,0.3);
      display: block;
      transition:  opacity 0.4s ease;
+     cursor: pointer;
 }
 
 .tab-control > ul > li > a:active {
@@ -125,12 +134,11 @@ div.weather-tab-control button.active {
 }
 
 .tab-active{
-    border-left: 0.1em solid black;
-    border-right: 0.1em solid black;
-    border-top: 0.1em solid black;
+    border-left: 0.1em solid white;
+    border-right: 0.1em solid white;
+    border-top: 0.1em solid white;
     border-bottom: none !important;
 }
-
 
 .tab-control > ul > li > * {
     padding: 0em 0em 0.5em 0em   ;  
