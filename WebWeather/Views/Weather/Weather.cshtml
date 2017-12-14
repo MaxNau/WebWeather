@@ -1,0 +1,400 @@
+﻿@model List<List<WebWeather.ViewModels.ClimateIndicators>>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = "Weather";
+}
+
+<div class="tab-control">
+    <ul>
+        <li id="1">
+            <a href="#fragment-x1">
+                <div>
+                    <p>Tab Text</p>
+                    <p>Tab Text 2</p>
+                    <p>Tab Text 3</p>
+                </div>
+            </a>
+        </li>
+        <li id="2">
+            <a href="#fragment-x2">
+                <div>
+                    <p>Tab Text</p>
+                    <p>Tab Text 2</p>
+                    <p>Tab Text 3</p>
+                </div>
+            </a>
+        </li>
+        <li id="3">
+            <a href="#fragment-x3">
+                <div>
+                    <p>Tab Text</p>
+                    <p>Tab Text 2</p>
+                    <p>Tab Text 3</p>
+                </div>
+            </a>
+        </li>
+        <li id="4">
+            <a href="#fragment-x4">
+                <div>
+                    <p>Tab Text</p>
+                    <p>Tab Text 2</p>
+                    <p>Tab Text 3</p>
+                </div>
+            </a>
+        </li>
+        <li id="5">
+            <a href="#fragment-x5">
+                <div>
+                    <p>Tab Text</p>
+                    <p>Tab Text 2</p>
+                    <p>Tab Text 3</p>
+                </div>
+            </a>
+        </li>
+        <li id="6">
+            <a href="#fragment-x6">
+                <div>
+                    <p>Tab Text</p>
+                    <p>Tab Text 2</p>
+                    <p>Tab Text 3</p>
+                </div>
+            </a>
+        </li>
+        <li id="7">
+            <a href="#fragment-x7">
+                <div>
+                    <p>Tab Text</p>
+                    <p>Tab Text 2</p>
+                    <p>Tab Text 3</p>
+                </div>
+            </a>
+        </li>
+        <li id="8">
+            <a href="#fragment-x8">
+                <div>
+                    <p>Tab Text</p>
+                    <p>Tab Text 2</p>
+                    <p>Tab Text 3</p>
+                </div>
+            </a>
+        </li>
+        <li id="9">
+            <a href="#fragment-x9">
+                <div>
+                    <p>Tab Text</p>
+                    <p>Tab Text 2</p>
+                    <p>Tab Text 3</p>
+                </div>
+            </a>
+        </li>
+        <li id="10">
+            <a href="#fragment-x10">
+                <div>
+                    <p>Tab Text 11</p>
+                    <p>Tab Text 2</p>
+                    <p>Tab Text 3</p>
+                </div>
+            </a>
+        </li>
+        <li id="11">
+            <a href="#fragment-x11">
+                <div>
+                    <p>Tab Text 11</p>
+                    <p>Tab Text 2</p>
+                    <p>Tab Text 3</p>
+                </div>
+            </a>
+        </li>
+        <li id="12">
+            <a href="#fragment-x12">
+                <div>
+                    <p>Tab Text 11</p>
+                    <p>Tab Text 2</p>
+                    <p>Tab Text 3</p>
+                </div>
+            </a>
+        </li>
+        <li id="13">
+            <a href="#fragment-x13">
+                <div>
+                    <p>Tab Text 11</p>
+                    <p>Tab Text 2</p>
+                    <p>Tab Text 3</p>
+                </div>
+            </a>
+        </li>
+        <li id="14">
+            <a href="#fragment-x14">
+                <div>
+                    <p>Tab Text 11</p>
+                    <p>Tab Text 2</p>
+                    <p>Tab Text 3</p>
+                </div>
+            </a>
+        </li>
+        <li id="15">
+            <a href="#fragment-x15">
+                <div>
+                    <p>Tab Text 11</p>
+                    <p>Tab Text 2</p>
+                    <p>Tab Text 3</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div id="f-1">
+        <div class="myslider-container">
+            <div class="myslider">
+                <div class="mysliderlist">
+                    <div class="myslidertrack">
+                        <button onclick="prev()">prev</button>
+                        <div class="myslide slide-notactive" data-slide-index="1"><h1>Slide 1</h1></div>
+                        <div class="myslide slide-active" data-slide-index="2"><h1>Slide 2</h1></div>
+                        <div class="myslide slide-active" data-slide-index="3"><h1>Slide 3</h1></div>
+                        <div class="myslide slide-notactive" data-slide-index="4"><h1>Slide 4</h1></div>
+                        <div class="myslide slide-notactive" data-slide-index="5"><h1>Slide 5</h1></div>
+                        <div class="myslide slide-notactive" data-slide-index="6"><h1>Slide 6</h1></div>
+                        <div class="myslide slide-notactive" data-slide-index="7"><h1>Slide 7</h1></div>
+                     
+                        <button onclick="next()">next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="f-2">
+        <h1>Second tab</h1>
+    </div>
+    <div id="f-3">
+        <h1>Third tab</h1>
+    </div>
+    <div id="f-4">
+        <h1>Fourth tab</h1>
+    </div>
+    <div id="f-5">
+        <h1>Fifth tab</h1>
+    </div>
+    <div id="f-6">
+        <h1>Six tab</h1>
+    </div>
+    <div id="f-7">
+        <h1>Seventh tab</h1>
+    </div>
+    <div id="f-8">
+        <h1>Eighth tab</h1>
+    </div>
+    <div id="f-9">
+        <h1>Ninth tab</h1>
+    </div>
+    <div id="f-10">
+        <h1>Tens tab</h1>
+    </div>
+    <div id="f-11">
+        <h1>Eleventh tab</h1>
+    </div>
+    <div id="f-12">
+        <h1>Twelvs tab</h1>
+    </div>
+    <div id="f-13">
+        <h1>Thirtinth tab</h1>
+    </div>
+    <div id="f-14">
+        <h1>Fourtinth tab</h1>
+    </div>
+    <div id="f-15">
+        <h1>Fivetinth tab</h1>
+    </div>
+</div>
+
+
+<div id="tabs" class="test">
+    <ul>
+        @{
+            int i = 0;
+            foreach (var item in Model)
+            {
+                <li>
+                    <a href="#fragment-@i">
+                        <div> asdasd</div>
+                        <div>
+                            <p>@item[0].Date.ToShortDateString()</p>
+                            <p>@item.Select(x => x.Atmospheric.Temperature.Min).Min()</p>
+                            <p>@item.Select(x => x.Atmospheric.Temperature.Max).Max()</p>
+                        </div>
+                    </a>
+
+                </li>
+
+                foreach (var group in item)
+                {
+
+                }
+                i++;
+            }
+        }
+    </ul>
+    @{
+        i = 0;
+        foreach (var item in Model)
+        {
+            <div id="fragment-@i">
+
+                @*<p> Hourly forecast on @item[i].Date.ToShortDateString() </p>*@
+                <div class="slider-container">
+                    <div class="multiple-items-@i">
+                        @foreach (var wea in item)
+                        {
+                            <div>
+                                <br />
+                                <p>
+                                    @wea.Date.ToString("HH:mm");
+                                </p>
+                                <p>
+                                    <b>Temperature: </b> @wea.Atmospheric.Temperature.Current
+                                </p>
+                                <p>
+                                    <b>Clouds: </b>@wea.Atmospheric.Cloudiness
+                                </p>
+                                <p>
+                                    <b>Humidity: </b>@wea.Atmospheric.Humidity
+                                </p>
+                                <p>
+                                    @wea.Atmospheric.Pressure
+                                </p>
+                                <p>
+                                    <b>Snow: </b>@wea.Atmospheric.Snow
+                                </p>
+                                <br />
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            i++;
+        }
+    }
+
+</div>
+<script>
+    $(document).ready(function () {
+        $("#tabs").tabs({
+            beforeActivate: function (event, ui) {
+                slick(ui.newTab.index());
+            }
+        });
+    });
+
+    slick(0);
+
+    function prev() {
+        var slidertrack = document.getElementsByClassName("myslidertrack");
+        var slides = slidertrack[0].getElementsByTagName("div");
+        var activeSlides = slidertrack[0].getElementsByClassName("slide-active");
+        var activeSlidesArr = Array.from(activeSlides);
+        var index = activeSlidesArr[0].dataset.slideIndex - 1;
+        if (index - 1 >= 0)
+        {
+            activeSlidesArr[activeSlidesArr.length - 1].classList.remove("slide-active");
+            activeSlidesArr[activeSlidesArr.length - 1].classList.add("slide-notactive");
+            slides[index - 1].classList.remove("slide-notactive");
+            slides[index - 1].classList.add("slide-active");
+        }
+        else {
+
+        }
+    }
+
+    function next() {
+        var slidertrack = document.getElementsByClassName("myslidertrack");
+        var slides = slidertrack[0].getElementsByTagName("div");
+        var activeSlides = slidertrack[0].getElementsByClassName("slide-active");
+        var activeSlidesArr = Array.from(activeSlides);
+        var index = activeSlidesArr[1].dataset.slideIndex - 1;
+        if ((parseInt(index) + 1) < (slides.length)) {
+            if (index <= 2) {
+                slides[index - 1].classList.remove("slide-active");
+                slides[index - 1].classList.add("slide-notactive");
+                slides[index + 1].classList.remove("slide-notactive");
+                slides[index + 1].classList.add("slide-active");
+            }
+            else {
+                slides[index - 1].classList.remove("slide-active");
+                slides[index - 1].classList.add("slide-notactive");
+                slides[index + 1].classList.remove("slide-notactive");
+                slides[index + 1].classList.add("slide-active");
+            }
+        }
+        else {
+
+        }
+    }
+
+    slide();
+        
+    function slide()
+    {
+        setInterval(next, 2000);
+    }
+
+    function slick(index) {
+        $('.multiple-items-' + index).not('.slick-initialized').slick({
+            infinite: false,
+            slidesToShow: 4,
+            slidesToScroll: 1
+        });
+        $('.multiple-items-' + index).slick('slickGoTo', 0);
+    }
+
+    var tab = document.getElementsByClassName("tab-control");
+    var ul = tab[0].getElementsByTagName("ul");
+    var items = ul[0].getElementsByTagName("li");
+    var arr = Array.from(items);
+    var lastClicked;
+    var lastFragment;
+
+    var r = Math.max.apply(Math, arr.map(function (o) { return o.clientHeight; }))
+
+    for (i = 0; i < arr.length; i++) {
+        arr[i].style.height = r + "px";
+    }
+    var handle = function callback(e) {
+        var e = window.e || e;
+
+        if (e.target.tagName !== 'LI')
+            return;
+
+        e.target.classList.add("tab-active");
+        var fragment = document.getElementById("f-" + e.target.id);
+
+        fragment.classList.add("fragment-active");
+
+        if (lastClicked) {
+            if (lastClicked.id != e.target.id) {
+                lastClicked.classList.remove("tab-active");
+                lastFragment.classList.remove("fragment-active");
+                lastClicked = e.target;
+                lastFragment = fragment;
+            }
+        }
+        else {
+            lastFragment = fragment;
+            lastClicked = e.target;
+        }
+    }
+
+    if (document.addEventListener)
+        document.addEventListener('click', handle, false);
+    else
+        document.attachEvent('onclick', handle);
+
+</script>
+
+<script>
+    var tab = document.getElementsByClassName("tab-control");
+    //var ul = tab.getElementsByTagName("ul");
+    //var items = ul.getElementsByTagName("li");
+</script>
+

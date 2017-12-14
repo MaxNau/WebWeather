@@ -1,0 +1,166 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+div.weather-tab-control {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+div.weather-tab-control button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+div.weather-tab-control button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.weather-tab-control button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.weather-tab {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.test {
+    background-image: url(Images/autumn.jpg) !important;
+    background-size: cover !important;
+}
+
+.test p {
+    color: white;
+}
+
+.slider-container {
+  margin: 0 auto;
+  padding: 40px;
+  width: 90%;
+}
+
+.ui-widget-header{
+    background: none !important;
+    border-left: none !important; 
+    border-right: none !important;
+    border-top: none !important;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    background: none !important;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    background: none !important;
+    box-decoration-break:slice;
+}
+
+.ui-tabs-tab .ui-corner-top .ui-state-default .ui-tab{
+    border: none !important;
+    
+}
+
+.tab-control{
+   overflow: hidden;
+}
+
+.tab-control > ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;   
+}
+
+.tab-control > ul > li {
+    list-style: none;
+    float: left;
+    position: relative;
+    padding: 0.4em;
+    border-bottom: 0.1em solid black;
+}
+
+
+.tab-control > ul > li a {
+    text-decoration: none;
+    color: black;
+}
+
+.tab-control > ul > li > a:hover {
+    opacity: 0.3;
+     display: block;
+     transition:  opacity 0.4s ease;
+}
+
+.tab-control > ul > li > a:active {
+
+}
+
+.tab-active{
+    border-left: 0.1em solid black;
+    border-right: 0.1em solid black;
+    border-top: 0.1em solid black;
+    border-bottom: none !important;
+}
+
+
+.tab-control > ul > li > * {
+    padding: 0em 0em 0.5em 0em   ;  
+    pointer-events: none;
+}
+
+[id^=f-]{
+    visibility:hidden;
+    display:none;
+}
+
+.fragment-active{
+    visibility:visible;
+    display: block;
+}
+
+.myslide{
+    display: inline-block;
+    padding: 10px;
+}
+
+.slide-active{
+    visibility: visible;
+    display: inline-block !important;
+}
+
+.slide-notactive{
+    visibility: hidden;
+    display: none !important;
+}
+
+
+
