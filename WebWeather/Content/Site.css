@@ -145,7 +145,7 @@ div.weather-tab-control button.active {
     pointer-events: none;
 }
 
-[id^=f-]{
+[id^=fragment-x]{
     visibility:hidden;
     display:none;
 }

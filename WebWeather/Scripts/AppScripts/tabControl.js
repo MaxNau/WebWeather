@@ -3,15 +3,24 @@
         var lastClicked;
         var lastFragment;
 
-        var tab = document.getElementsByClassName("tab-control");
-        var ul = tab[0].getElementsByTagName("ul");
+        var tabControl = document.getElementsByClassName("tab-control");
+        var ul = tabControl[0].getElementsByTagName("ul");
         var items = ul[0].getElementsByTagName("li");
         var arr = Array.from(items);
 
-        for (i = 0; i < arr.length; i++){
+        var tabs = document.getElementsByClassName("tabs-container");
+        var tabContents = document.getElementsByClassName("tabs-content");
+
+        var tabsContentsArr = Array.from(tabContents);
+
+        for (var i = 0; i < arr.length; i++){
             arr[i].id = i + 1;
             var link = arr[i].getElementsByTagName("a");
             link[0].href = "#fragment-x" + (i + 1);
+        }
+
+        for (var i = 0; i < tabsContentsArr.length; i++){
+            tabsContentsArr
         }
 
         doFistTabActive();
@@ -25,7 +34,7 @@
                 return;
 
             e.target.classList.add("tab-active");
-            var fragment = document.getElementById("f-" + e.target.id);
+            var fragment = document.getElementById("fragment-x" + e.target.id);
 
             fragment.classList.add("fragment-active");
 
@@ -54,7 +63,7 @@
 
         function doFistTabActive() {
             arr[0].classList.add("tab-active");
-            var fragment = document.getElementById("f-" + arr[0].id);
+            var fragment = document.getElementById("fragment-x" + arr[0].id);
             fragment.classList.add("fragment-active");
             lastClicked = arr[0];
             lastFragment = fragment;

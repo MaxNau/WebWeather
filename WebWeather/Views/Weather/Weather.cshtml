@@ -24,18 +24,16 @@
             }
         }
     </ul>
-    <div>
+    <div class="tabs-container">
         @{
             int xx = 1;
             int j = 0;
             foreach (var item in Model)
             {
-                    <div id="f-@xx">
-                        <div class="myslider-container">
+                    <div id="@string.Format("fragment-x{0}", xx)">
                             <div class="myslider">
-                                <div class="mysliderlist">
-                                    <div id="myslidertrack-@xx" class="myslidertrack">
-                                        <button onclick="prev()">prev</button>
+                                    <div class="myslidertrack">
+
                                         @{  
                                             string cla;
                                             foreach (var wea in item)
@@ -75,12 +73,10 @@
                                                 j++;
                                             }
                                             }
-                                        <button onclick="next()">next</button>
+      
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
                                                 j = 0;
                                                 xx++;
                                             }
@@ -107,10 +103,6 @@
 
                 </li>
 
-                foreach (var group in item)
-                {
-
-                }
                 i++;
             }
         }
@@ -274,6 +266,7 @@
     //else
     //    document.attachEvent('onclick', handle);
     tabControl.initialize();
+    carousel.inidialize();
 </script>
 
 <script>
