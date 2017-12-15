@@ -10,20 +10,17 @@
 <div class="tab-control">
     <ul>
         @{
-            int z = 1;
             foreach (var item in Model)
             {
-                <li id="@z">
-                    <a href="@string.Format("#fragment-x{0}", z)">
+                <li>
+                    <a>
                         <div>
                             <p>@item[0].Date.ToShortDateString()</p>
                             <p>@item.Select(x => x.Atmospheric.Temperature.Min).Min()</p>
                             <p>@item.Select(x => x.Atmospheric.Temperature.Max).Max()</p>
                         </div>
                     </a>
-
                 </li>
-                z++;
             }
         }
     </ul>
@@ -161,114 +158,122 @@
 
 </div>
 <script>
-    $(document).ready(function () {
-        $("#tabs").tabs({
-            beforeActivate: function (event, ui) {
-                slick(ui.newTab.index());
-            }
-        });
-    });
+    //$(document).ready(function () {
+    //    $("#tabs").tabs({
+    //        beforeActivate: function (event, ui) {
+    //            slick(ui.newTab.index());
+    //        }
+    //    });
+    //});
 
-    var currentFragment;
-    slick(0);
+    //var currentFragment;
+    //slick(0);
 
-    function prev() {
-        currentFragment = document.getElementsByClassName("fragment-active");
-        var id = currentFragment[0].id.substring('f-'.length);
-        var slidertrack = document.getElementById("myslidertrack-" + currentFragment[0].id.substring('f-'.length));
-        var slides = slidertrack.getElementsByTagName("div");
-        var activeSlides = slidertrack.getElementsByClassName("slide-active");
-        var activeSlidesArr = Array.from(activeSlides);
-        var index = activeSlidesArr[0].dataset.slideIndex - 1;
-        if (index - 1 >= 0) {
-            activeSlidesArr[activeSlidesArr.length - 1].classList.remove("slide-active");
-            activeSlidesArr[activeSlidesArr.length - 1].classList.add("slide-notactive");
-            slides[index - 1].classList.remove("slide-notactive");
-            slides[index - 1].classList.add("slide-active");
-        }
-        else {
+    //function prev() {
+    //    currentFragment = document.getElementsByClassName("fragment-active");
+    //    var id = currentFragment[0].id.substring('f-'.length);
+    //    var slidertrack = document.getElementById("myslidertrack-" + currentFragment[0].id.substring('f-'.length));
+    //    var slides = slidertrack.getElementsByTagName("div");
+    //    var activeSlides = slidertrack.getElementsByClassName("slide-active");
+    //    var activeSlidesArr = Array.from(activeSlides);
+    //    var index = activeSlidesArr[0].dataset.slideIndex - 1;
+    //    if (index - 1 >= 0) {
+    //        activeSlidesArr[activeSlidesArr.length - 1].classList.remove("slide-active");
+    //        activeSlidesArr[activeSlidesArr.length - 1].classList.add("slide-notactive");
+    //        slides[index - 1].classList.remove("slide-notactive");
+    //        slides[index - 1].classList.add("slide-active");
+    //    }
+    //    else {
 
-        }
-    }
+    //    }
+    //}
 
-    function next() {
-        currentFragment = document.getElementsByClassName("fragment-active");
-        var slidertrack = document.getElementById("myslidertrack-" + currentFragment[0].id.substring('f-'.length));
-        var slides = slidertrack.getElementsByTagName("div");
-        var activeSlides = slidertrack.getElementsByClassName("slide-active");
-        var activeSlidesArr = Array.from(activeSlides);
-        var index = activeSlidesArr[1].dataset.slideIndex - 1;
-        if ((parseInt(index) + 1) < (slides.length)) {
-            if (index <= 2) {
-                slides[index - 1].classList.remove("slide-active");
-                slides[index - 1].classList.add("slide-notactive");
-                slides[index + 1].classList.remove("slide-notactive");
-                slides[index + 1].classList.add("slide-active");
-            }
-            else {
-                slides[index - 1].classList.remove("slide-active");
-                slides[index - 1].classList.add("slide-notactive");
-                slides[index + 1].classList.remove("slide-notactive");
-                slides[index + 1].classList.add("slide-active");
-            }
-        }
-        else {
+    //function next() {
+    //    currentFragment = document.getElementsByClassName("fragment-active");
+    //    var slidertrack = document.getElementById("myslidertrack-" + currentFragment[0].id.substring('f-'.length));
+    //    var slides = slidertrack.getElementsByTagName("div");
+    //    var activeSlides = slidertrack.getElementsByClassName("slide-active");
+    //    var activeSlidesArr = Array.from(activeSlides);
+    //    var index = activeSlidesArr[1].dataset.slideIndex - 1;
+    //    if ((parseInt(index) + 1) < (slides.length)) {
+    //        if (index <= 2) {
+    //            slides[index - 1].classList.remove("slide-active");
+    //            slides[index - 1].classList.add("slide-notactive");
+    //            slides[index + 1].classList.remove("slide-notactive");
+    //            slides[index + 1].classList.add("slide-active");
+    //            $(slides[index + 1]).fadeOut(50);
+    //            $(slides[index + 1]).fadeIn(1000);
+    //            $(slides[index]).fadeOut(50);
+    //            $(slides[index]).fadeIn(1000);
+    //        }
+    //        else {
+    //            slides[index - 1].classList.remove("slide-active");
+    //            slides[index - 1].classList.add("slide-notactive");
+    //            slides[index + 1].classList.remove("slide-notactive");
+    //            slides[index + 1].classList.add("slide-active");
+    //            $(slides[index + 1]).fadeOut(50);
+    //            $(slides[index + 1]).fadeIn(1000);
+    //            $(slides[index]).fadeOut(50);
+    //            $(slides[index]).fadeIn(1000);
+    //        }
+    //    }
+    //    else {
 
-        }
-    }
+    //    }
+    //}
 
-    function slick(index) {
-        $('.multiple-items-' + index).not('.slick-initialized').slick({
-            infinite: false,
-            slidesToShow: 4,
-            slidesToScroll: 1
-        });
-        $('.multiple-items-' + index).slick('slickGoTo', 0);
-    }
+    //function slick(index) {
+    //    $('.multiple-items-' + index).not('.slick-initialized').slick({
+    //        infinite: false,
+    //        slidesToShow: 4,
+    //        slidesToScroll: 1
+    //    });
+    //    $('.multiple-items-' + index).slick('slickGoTo', 0);
+    //}
 
-    var tab = document.getElementsByClassName("tab-control");
-    var ul = tab[0].getElementsByTagName("ul");
-    var items = ul[0].getElementsByTagName("li");
-    var arr = Array.from(items);
-    var lastClicked;
-    var lastFragment;
+    //var tab = document.getElementsByClassName("tab-control");
+    //var ul = tab[0].getElementsByTagName("ul");
+    //var items = ul[0].getElementsByTagName("li");
+    //var arr = Array.from(items);
+    //var lastClicked;
+    //var lastFragment;
     
 
-    var r = Math.max.apply(Math, arr.map(function (o) { return o.clientHeight; }))
+    //var r = Math.max.apply(Math, arr.map(function (o) { return o.clientHeight; }))
 
-    for (i = 0; i < arr.length; i++) {
-        arr[i].style.height = r + "px";
-    }
-    var handle = function callback(e) {
-        var e = window.e || e;
+    //for (i = 0; i < arr.length; i++) {
+    //    arr[i].style.height = r + "px";
+    //}
+    //var handle = function callback(e) {
+    //    var e = window.e || e;
 
-        if (e.target.tagName !== 'LI')
-            return;
+    //    if (e.target.tagName !== 'LI')
+    //        return;
 
-        e.target.classList.add("tab-active");
-        var fragment = document.getElementById("f-" + e.target.id);
+    //    e.target.classList.add("tab-active");
+    //    var fragment = document.getElementById("f-" + e.target.id);
 
-        fragment.classList.add("fragment-active");
+    //    fragment.classList.add("fragment-active");
 
-        if (lastClicked) {
-            if (lastClicked.id != e.target.id) {
-                lastClicked.classList.remove("tab-active");
-                lastFragment.classList.remove("fragment-active");
-                lastClicked = e.target;
-                lastFragment = fragment;
-            }
-        }
-        else {
-            lastFragment = fragment;
-            lastClicked = e.target;
-        }
-    }
+    //    if (lastClicked) {
+    //        if (lastClicked.id != e.target.id) {
+    //            lastClicked.classList.remove("tab-active");
+    //            lastFragment.classList.remove("fragment-active");
+    //            lastClicked = e.target;
+    //            lastFragment = fragment;
+    //        }
+    //    }
+    //    else {
+    //        lastFragment = fragment;
+    //        lastClicked = e.target;
+    //    }
+    //}
 
-    if (document.addEventListener)
-        document.addEventListener('click', handle, false);
-    else
-        document.attachEvent('onclick', handle);
-
+    //if (document.addEventListener)
+    //    document.addEventListener('click', handle, false);
+    //else
+    //    document.attachEvent('onclick', handle);
+    tabControl.initialize();
 </script>
 
 <script>
